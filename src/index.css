@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root[data-theme="light"] {
+  --text: #040316;
+  --background: #e7e7f9;
+  --primary: #2f27ce;
+  --secondary: #dddbff;
+  --accent: #443dff;
+}
+:root[data-theme="dark"] {
+  --text: #eae9fc;
+  --background: #060618;
+  --primary: #3a31d8;
+  --secondary: #020024;
+  --accent: #0600c2;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@layer components {
+  .button {
+    @apply text-white bg-[#316359] py-2 px-4 rounded-full text-lg font-semibold hover:opacity-80 duration-200
+  }
+}
+
+.dropdown{
+  background-color: #00000080;
+}
+
+.filter-white {
+  filter: invert(100%) sepia(96%) saturate(16%) hue-rotate(350deg)
+    brightness(104%) contrast(100%);
+}
+
+.select-status{
+  background-image: url("./assets/icon-chevron-down.svg");
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+}
